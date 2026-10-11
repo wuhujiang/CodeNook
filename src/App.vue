@@ -14,7 +14,8 @@ const navItems = [
 ]
 
 const skills = [
-  { name: 'Vue 生态', percent: 94, detail: 'Vue 2 / Vue 3 · Hooks · Vue Router · Pinia' },
+  { name: 'Vue 生态', percent: 94, detail: '主要技术栈 · Vue 2 / Vue 3 · Pinia' },
+  { name: 'React 生态', percent: 65, detail: 'React 全家桶 · 有项目开发经验，使用频率较低' },
   { name: '工程化与构建', percent: 88, detail: 'Vite · 项目脚手架 · 规范化 · 模块化' },
   { name: 'JavaScript / TS', percent: 90, detail: 'ES6+ · TypeScript · 异步与数据处理' },
   { name: '跨端开发', percent: 86, detail: 'uni-app · 微信小程序 · H5 · App' },
@@ -188,7 +189,7 @@ function downloadResume() {
         <div class="hero-copy">
           <div class="eyebrow"><span class="status-dot"></span> OPEN TO OPPORTUNITIES</div>
           <h1>把复杂的业务，<br /><em>做成简单的体验。</em></h1>
-          <p class="hero-desc">你好，我是<strong>马超</strong>，一名专注于 Vue 生态的 Web 前端开发工程师。<br />擅长从 0 到 1 搭建项目，也享受把每一个细节做到更好的过程。</p>
+          <p class="hero-desc">你好，我是<strong>马超</strong>，一名专注于 Vue 生态的 Web 前端开发工程师，也具备 React 全家桶开发经验。<br />擅长从 0 到 1 搭建项目，也享受把每一个细节做到更好的过程。</p>
           <div class="hero-actions">
             <button class="primary-btn" type="button" @click="scrollTo('projects')">查看我的项目 <span>↓</span></button>
             <button class="text-btn" type="button" @click="downloadResume()">打印 / 保存简历 <span>↗</span></button>
@@ -228,7 +229,7 @@ function downloadResume() {
         <div class="about-grid">
           <div class="about-intro">
             <p class="large-copy">从业务出发，<br /><span>让技术真正产生价值。</span></p>
-            <p>我有 5 年以上前端开发经验，持续深耕 Vue 生态。工作中既能独立完成复杂业务，也重视团队协作、代码质量和用户体验。</p>
+            <p>我有 5 年以上前端开发经验，主要深耕 Vue 生态，也具备 React 全家桶开发经验（React 项目实践相对较少）。工作中既能独立完成复杂业务，也重视团队协作、代码质量和用户体验。</p>
             <p>从电商、教育 SaaS、金融到智能医疗，我参与过多种业务形态，积累了从项目搭建、功能开发到上线维护和性能优化的完整经验。</p>
           </div>
           <div class="numbers-grid">

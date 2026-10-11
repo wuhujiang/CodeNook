@@ -1,56 +1,38 @@
 # 马超 · 个人简历站
 
-基于 **Vite + Vue 3 + SCSS** 构建的个人简历与作品集网站。
+基于 **Vite + Vue 3 + SCSS** 构建的个人简历网站。简历内容请直接在网站中查看，本文档仅说明项目的运行与部署方式。
 
 ## 本地运行
 
 ```bash
-npm install
-npm run dev
+pnpm install
+pnpm dev
 ```
 
-生产构建：
+生产构建与本地预览：
 
 ```bash
-npm run build
-npm run preview
+pnpm build
+pnpm preview
 ```
 
-## 发布到 Cloudflare Pages
+## Vercel 部署
 
-### 方式一：首次手动上传（推荐先用这个）
+本项目已连接 GitHub 时，无需额外编写部署脚本或 YAML。Vercel 构建配置如下：
 
-1. 登录 Cloudflare Dashboard。
-2. 进入 **Workers & Pages → Create application → Pages → Upload assets**。
-3. 创建项目，例如 `ma-chao-resume`。
-4. 本地执行 `npm run build`。
-5. 将构建生成的 `dist` 文件夹上传，不要上传项目根目录。
-6. 部署完成后即可通过 `https://项目名.pages.dev` 访问。
+- Framework Preset：`Vite`
+- Build Command：`npm run build`
+- Output Directory：`dist`
+- Root Directory：项目根目录
 
-当前项目已经配置为部署在站点根路径：
+将变更推送到 Vercel 连接的 GitHub 仓库后，Vercel 会自动构建和部署。常用提交命令：
 
-```js
-// vite.config.js
-base: '/'
+```bash
+git add .
+git commit -m "更新简历网站"
+git push
 ```
 
-### 方式二：连接 Git 仓库自动部署
+## 修改内容
 
-Cloudflare Pages 的 Git 集成通常直接支持 GitHub / GitLab。如果 Cloudflare 页面没有 Gitee 选项，可以将项目同步到 GitHub，再在 Cloudflare 中连接 GitHub 仓库。
-
-构建配置填写：
-
-```text
-Framework preset: Vue
-Build command: npm run build
-Build output directory: dist
-Node.js version: 20
-```
-
-之后每次推送到连接的 GitHub 分支，Cloudflare Pages 会自动构建并发布。仅仅推送到 Gitee，Cloudflare Pages 通常不会自动监听，因此不需要在当前项目中添加 YAML 文件。
-
-## 内容修改
-
-简历中的经历、项目、技能等数据集中写在 `src/App.vue` 顶部的数组中，修改对应文字即可。页面样式位于 `src/style.scss`。
-
-点击页面中的“打印 / 保存简历”会调用浏览器打印功能，可以选择“另存为 PDF”。
+页面内容位于 `src/App.vue`，样式位于 `src/style.scss`。网站中的“打印 / 保存简历”按钮可调用浏览器打印功能并另存为 PDF。
