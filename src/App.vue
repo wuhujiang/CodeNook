@@ -19,6 +19,7 @@ const skills = [
   { name: '工程化与构建', percent: 88, detail: 'Vite · 项目脚手架 · 规范化 · 模块化' },
   { name: 'JavaScript / TS', percent: 90, detail: 'ES6+ · TypeScript · 异步与数据处理' },
   { name: '跨端开发', percent: 86, detail: 'uni-app · 微信小程序 · H5 · App' },
+  { name: 'Node.js / Java', percent: 55, detail: '基础语法与常见开发概念 · 可阅读和编写基础代码' },
 ]
 
 const experiences = [
@@ -229,7 +230,7 @@ function downloadResume() {
         <div class="about-grid">
           <div class="about-intro">
             <p class="large-copy">从业务出发，<br /><span>让技术真正产生价值。</span></p>
-            <p>我有 5 年以上前端开发经验，主要深耕 Vue 生态，也具备 React 全家桶开发经验（React 项目实践相对较少）。工作中既能独立完成复杂业务，也重视团队协作、代码质量和用户体验。</p>
+            <p>我有 5 年以上前端开发经验，主要深耕 Vue 生态，也具备 React 全家桶开发经验（React 项目实践相对较少）。此外，我掌握 Node.js 和 Java 的基础语法与常见开发概念。工作中既能独立完成复杂业务，也重视团队协作、代码质量和用户体验。</p>
             <p>从电商、教育 SaaS、金融到智能医疗，我参与过多种业务形态，积累了从项目搭建、功能开发到上线维护和性能优化的完整经验。</p>
           </div>
           <div class="numbers-grid">
