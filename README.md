@@ -36,3 +36,5 @@ git push
 ## 修改内容
 
 页面内容位于 `src/App.vue`，样式位于 `src/style.scss`。网站中的“打印 / 保存简历”按钮可调用浏览器打印功能并另存为 PDF。
+
+页脚显示的“最后更新”日期由 `vite.config.js` 在构建时自动注入（`__BUILD_TIME__`），无需手动维护，每次 `pnpm build` 会自动刷新。该日期仅在网页中展示，打印 / 导出的 PDF 不包含。

@@ -159,6 +159,10 @@ function scrollTo(id) {
 function downloadResume() {
   window.print()
 }
+
+// 最后更新日期：由 vite.config.js 在构建时注入，无需手动维护
+const buildDate = new Date(__BUILD_TIME__)
+const lastUpdated = `${buildDate.getFullYear()}年${buildDate.getMonth() + 1}月${buildDate.getDate()}日`
 </script>
 
 <template>
@@ -309,6 +313,6 @@ function downloadResume() {
       </section>
     </main>
 
-    <footer class="footer section-wrap"><span>© 2025 MA.CHAO</span><span>DESIGNED & BUILT WITH VUE</span><a href="#home" @click.prevent="scrollTo('home')">BACK TO TOP ↑</a></footer>
+    <footer class="footer section-wrap"><span>© 2025 MA.CHAO</span><span>最后更新：{{ lastUpdated }}</span><a href="#home" @click.prevent="scrollTo('home')">BACK TO TOP ↑</a></footer>
   </div>
 </template>
